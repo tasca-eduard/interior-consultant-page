@@ -2,33 +2,130 @@
     .showcase-container {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 10rem;
 
         .about {
-            width: 41rem;
+            max-width: 41rem;
             margin-right: 10rem;
+            margin-bottom: 2.8rem;
+
+            .title {
+                font-size: 4.8rem;
+                font-family: 'Lora', serif;
+                font-weight: 400;
+            }
+
+            .description,
+            .link {
+                font-size: 2.4rem;
+            }
+
+            .description {
+                margin: 2.4rem 0;
+            }
+
+            .link {
+                font-weight: 600;
+                text-decoration: none;
+                color: $white;
+                font-size: 1.8rem;
+
+                &.active,
+                &:hover,
+                &:focus {
+                    border-bottom: 2px solid $white;
+                }
+            }
         }
 
         .showcase-wrapper {
             position: relative;
+            min-width: 50rem;
 
             .img-wrapper {
                 max-width: 82.1rem;
-                width: 100%;
 
                 .img {
                     width: 100%;
                 }
             }
-
+            
             .card-component {
-                position: absolute;
-                background: $black;
-                bottom: 0;
-                right: 0;
-                transform: translate(-15%, 50%);
-                width: 40rem;
-                padding: .4rem 1rem;
+                max-width: 41rem;
+                outline: 2px solid $white;
+                outline-offset: 1rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .showcase-container {
+            .about {
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 1.4rem;
+
+                .title {
+                    font-size: 2.8rem;
+                }
+
+                .description {
+                    font-size: 1.4rem;
+                }
+
+                .link {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .showcase-wrapper {
+                .card-component {
+                    position: static;
+                    transform: none;
+                    max-width: 100%;
+                    margin-top: 2.8rem;
+                }
+
+                .description {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .showcase-container {
+            flex-wrap: wrap;
+
+            .about {
+                max-width: 100%;
+                margin-right: 0;
+            }
+
+            .showcase-wrapper {
+                margin: 2rem auto;
+                min-width: 0;
+
+                .card-component {
+                    .description {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .showcase-container {
+            margin-bottom: 0;
+        }
+        
+        .showcase-wrapper {
+            .card-component {
+                .description {
+                    font-size: 2rem;
+                }
             }
         }
     }

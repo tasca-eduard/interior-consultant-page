@@ -1,0 +1,46 @@
+.card-component {
+    position: absolute;
+    background: $black;
+    bottom: 0;
+    right: 0;
+    transform: translate(-15%, 50%);
+    max-width: 40rem;
+    width: 100%;
+    padding: 1rem 2.6rem 3.4rem;
+
+    .info-container {
+        display: flex;
+        align-items: center;
+
+        .avatar-wrapper {
+            width: 5.2rem;
+            height: 5.2rem;
+            border-radius: 50%;
+            overflow: hidden;
+
+            .img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .info-wrapper {
+            margin-left: 2rem;
+
+            .title {
+                margin-bottom: .5rem;
+            }
+
+            .subtitle {
+                color: rgba($white, .5);
+            }
+        }
+    }
+
+    .description {
+        margin-top: 1rem;
+        width: 70%;
+        font-size: 2.4rem;
+        font-family: 'Lora', serif;
+    }
+}

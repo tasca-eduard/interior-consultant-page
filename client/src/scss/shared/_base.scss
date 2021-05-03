@@ -11,10 +11,11 @@ html {
 body {
     background: $theme;
     color: $white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
-    max-width: 1700px;
+    max-width: 1400px;
     width: 100%;
     padding: 20px;
     margin: 0 auto;
